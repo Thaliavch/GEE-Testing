@@ -43,6 +43,12 @@
             <version>1.2.6</version> <!-- Use the latest version -->
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/io.github.densudas/shadowroot-search -->
+        <dependency>
+            <groupId>io.github.densudas</groupId>
+            <artifactId>shadowroot-search</artifactId>
+            <version>0.0.2</version>
+        </dependency>
 
 
 

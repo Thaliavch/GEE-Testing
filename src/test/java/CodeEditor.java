@@ -34,7 +34,7 @@ public class CodeEditor {
     void GoogleSignIn() throws InterruptedException {
 
         // Going to Google Sign In Page:
-        driver.get("https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fuc.appengine.google.com%2F_ah%2Fconflogin%3Fstate%3D%7EAJKiYcH3157B67WlqgBjJ6XZDMTsAudWgfbE-6AEOQko0_AePQOnoZxESJDZ0aleTL4rhpbjnfFbvMIT5VtEdCDzVAWnREmJ835mhDsa0Ev0Zf5KkwL9f0x3_a52EqJDrlQj8L-fkODAmB1OaSrulHFZY_mOLyP7NUfjKLQ6kBaBiazB6KlyDpSKtfH7alYARPbFW1dMUb1l&ifkv=ARZ0qKLjnpJIQWCYWHBNHRfWEoDEYlbjGNwJnDidtPORjTU1POTW0FnyfgbX7z21dgXfW7cEnysD&passive=true&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1241359021%3A1712544933064204&theme=mn&ddm=0");
+        driver.get("https://accounts.google.com/");
 
         // Making sure page is loaded  before proceeding
         // Wait for an element on the new page to ensure it has loaded
