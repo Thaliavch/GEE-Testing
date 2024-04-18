@@ -31,10 +31,10 @@ public class DatasetsPage {
         inputBox.sendKeys("climate");
         Thread.sleep(2000);
         inputBox.sendKeys(Keys.ENTER);
-        Thread.sleep(3000);
+        Thread.sleep(5000);
 
         driver.navigate().back();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
     }
 
     @Test(priority = 2)
@@ -98,29 +98,29 @@ public class DatasetsPage {
         String btn12 = "Explore other geophysical data";
 
         scrollDown(1000);
-        testingButtons(btn1);
+        testingByPartialLinkText(btn1);
         scrollDown(1000);
-        testingButtons(btn2);
+        testingByPartialLinkText(btn2);
         scrollDown(1500);
-        testingButtons(btn3);
+        testingByPartialLinkText(btn3);
         scrollDown(1500);
-        testingButtons(btn4);
+        testingByPartialLinkText(btn4);
         scrollDown(2000);
-        testingButtons(btn5);
+        testingByPartialLinkText(btn5);
         scrollDown(2000);
-        testingButtons(btn6);
+        testingByPartialLinkText(btn6);
         scrollDown(2500);
-        testingButtons(btn7);
+        testingByPartialLinkText(btn7);
         scrollDown(3500);
-        testingButtons(btn8);
+        testingByPartialLinkText(btn8);
         scrollDown(3000);
-        testingButtons(btn9);
+        testingByPartialLinkText(btn9);
         scrollDown(3000);
-        testingButtons(btn10);
+        testingByPartialLinkText(btn10);
         scrollDown(3500);
-        testingButtons(btn11);
+        testingByPartialLinkText(btn11);
         scrollDown(3500);
-        testingButtons(btn12);
+        testingByPartialLinkText(btn12);
 
     }
 
@@ -133,15 +133,15 @@ public class DatasetsPage {
         String link5 = "Videos";
 
         scrollDown(4000);
-        testingButtons(link1);
+        testingByPartialLinkText(link1);
         scrollDown(4000);
-        testingButtons(link2);
+        testingByPartialLinkText(link2);
         scrollDown(4000);
-        testingButtons(link3);
+        testingByPartialLinkText(link3);
         scrollDown(4000);
-        testingButtons(link4);
+        testingByPartialLinkText(link4);
         scrollDown(4000);
-        testingButtons(link5);
+        testingByPartialLinkText(link5);
     }
     @Test(priority = 7)
     void connectLinks() throws InterruptedException {
@@ -152,15 +152,15 @@ public class DatasetsPage {
         String link5 = "YouTube";
 
         scrollDown(4000);
-        testingButtons(link1);
+        testingByPartialLinkText(link1);
         scrollDown(4000);
-        testingButtons(link2);
+        testingByPartialLinkText(link2);
         scrollDown(4000);
-        testingButtons(link3);
+        testingByPartialLinkText(link3);
         scrollDown(4000);
-        testingButtons(link4);
+        testingByPartialLinkText(link4);
         scrollDown(4000);
-        testingButtons(link5);
+        testingByPartialLinkText(link5);
     }
     @Test(priority = 8)
     void programsLinks() throws InterruptedException {
@@ -171,15 +171,15 @@ public class DatasetsPage {
         String link5 = "Google Developer Student Clubs";
 
         scrollDown(4000);
-        testingButtons(link1);
+        testingByPartialLinkText(link1);
         scrollDown(4000);
-        testingButtons(link2);
+        testingByPartialLinkText(link2);
         scrollDown(4000);
-        testingButtons(link3);
+        testingByPartialLinkText(link3);
         scrollDown(4000);
-        testingButtons(link4);
+        testingByPartialLinkText(link4);
         scrollDown(4000);
-        testingButtons(link5);
+        testingByPartialLinkText(link5);
 
     }
     @Test(priority = 9)
@@ -193,19 +193,19 @@ public class DatasetsPage {
         String link7 = "Chrome Web Store Dashboard";
 
         scrollDown(4000);
-        testingButtons(link1);
+        testingByPartialLinkText(link1);
         scrollDown(4000);
-        testingButtons(link2);
+        testingByPartialLinkText(link2);
         scrollDown(4000);
-        testingButtons(link3);
+        testingByPartialLinkText(link3);
         scrollDown(4000);
-        testingButtons(link4);
+        testingByPartialLinkText(link4);
         scrollDown(4000);
-        testingButtons(link5);
+        testingByPartialLinkText(link5);
         scrollDown(4000);
-        testingButtons(link6);
+        testingByPartialLinkText(link6);
         scrollDown(4000);
-        testingButtons(link7);
+        testingByPartialLinkText(link7);
     }
     @Test(priority = 10)
     void googleForDevelopersLinks() throws InterruptedException {
@@ -216,7 +216,7 @@ public class DatasetsPage {
         String link5 = "All products";
 
         scrollDown(4000);
-        testingButtons(link1);
+        testingByPartialLinkText(link1);
         scrollDown(4000);
         //-------
         testingLinkWithLinkText(link2);
@@ -227,7 +227,7 @@ public class DatasetsPage {
         scrollDown(4000);
         //------------
 
-        testingButtons(link5);
+        testingByPartialLinkText(link5);
 
     }
 
@@ -299,8 +299,8 @@ public class DatasetsPage {
 
     }
 
-    void testingButtons(String text) throws InterruptedException {
-        String mainWindowHandle = driver.getWindowHandle();
+    void testingByPartialLinkText(String text) throws InterruptedException {
+        //String mainWindowHandle = driver.getWindowHandle();
         WebElement btn = driver.findElement(By.partialLinkText(text));
 
 

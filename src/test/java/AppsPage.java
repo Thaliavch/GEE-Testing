@@ -111,10 +111,12 @@ public class AppsPage {
     @Test(priority = 8)
     void viewTabs() throws InterruptedException {
        // try again with scrollDown function?
+        scrollDown(2000);
+
+        //exe.executeScript("window.scrollTo(0, 2000)"); // Correctly passing dist
+        //Thread.sleep(2000); // It's better to use explicit waits rather than Thread.sleep
+
         JavascriptExecutor exe = (JavascriptExecutor) driver;
-        exe.executeScript("window.scrollTo(0, 2000)"); // Correctly passing dist
-        Thread.sleep(2000); // It's better to use explicit waits rather than Thread.sleep
-        //
         WebElement listViewTab = driver.findElement(By.partialLinkText("list"));
         hoverOver(listViewTab);
         Thread.sleep(1500);
@@ -127,6 +129,19 @@ public class AppsPage {
         Thread.sleep(1500);
         moduleView.click();
         Thread.sleep(2000);
+    }
+
+    @Test(priority = 9)
+    void footerLinks() throws InterruptedException {
+        String link1 = "About Earth Engine";
+        String link2 = "Terms of Service";
+        String link3 = "Privacy";
+        String link4 = "Sign out";
+
+        testingByPartialLinkText(link1);
+        testingByPartialLinkText(link2);
+        testingByPartialLinkText(link3);
+        testingByPartialLinkText(link4);
 
     }
 
@@ -139,12 +154,25 @@ public class AppsPage {
     // Utility Methods
     void scrollDown(int dist) throws InterruptedException {
         JavascriptExecutor exe = (JavascriptExecutor) driver;
-        exe.executeScript("window.scroll(0, arguments[0]);", dist); // Correctly passing dist
-        Thread.sleep(2000); // It's better to use explicit waits rather than Thread.sleep
+        exe.executeScript("window.scroll(0, arguments[0]);", dist); //passing dist
+        Thread.sleep(2000); // It's better to use explicit waits rather than Thread.sleep?
     }
 
     void hoverOver(WebElement elm) throws InterruptedException {
         Actions action = new Actions(driver);
         action.moveToElement(elm).perform();
+    }
+
+    void testingByPartialLinkText(String text) throws InterruptedException {
+        WebElement btn = driver.findElement(By.partialLinkText(text));
+
+        Actions action = new Actions(driver);
+        action.moveToElement(btn).perform();
+        Thread.sleep(1500);
+
+        btn.click();
+        Thread.sleep(3000);
+
+        driver.navigate().back();
     }
 }

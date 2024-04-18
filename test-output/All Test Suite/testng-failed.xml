@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="MySequentialTest(failed)">
+    <classes>
+      <class name="OceanTimeseriesPage">
+        <methods>
+          <include name="layersDropdown"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- OceanTimeseriesPage -->
+      <class name="HomePage">
+        <methods>
+          <include name="codeEditorButton"/>
+          <include name="datasetsButton"/>
+          <include name="caseStudiesButton"/>
+          <include name="setup"/>
+          <include name="apiButton"/>
+          <include name="signUpButton"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- HomePage -->
+      <class name="DataCatalog">
+        <methods>
+          <include name="copyDataset"/>
+        </methods>
+      </class> <!-- DataCatalog -->
+    </classes>
+  </test> <!-- MySequentialTest(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->

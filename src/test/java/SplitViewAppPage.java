@@ -171,34 +171,26 @@ public class SplitViewAppPage {
         String link1 = "About Earth Engine";
         String link2 = "Terms of Service";
         String link3 = "Privacy";
-        String link4 = "Sign Out";
+        String link4 = "Sign out";
         String link5 = "View Source Code";
-        String link6 = "Shortcuts (Ctrl-Shift-H or ?)";
+        String link6 = "Shortcuts";
 
         dropDownTest(link1);
         dropDownTest(link2);
         dropDownTest(link3);
-
+        dropDownTest(link4);
         dropDownTest(link5);
+        //dropDownTest(link6);
 
-        // Sign out
-       /*Thread.sleep((2000));
+       // Shortcut
         WebElement headerMenu = driver.findElement(By.id("header-menu-button"));
         headerMenu.click();
-        WebElement signOut = driver.findElement(By.partialLinkText(link4));
-        hoverOver(signOut);
-        signOut.click();
-        driver.navigate().back();
-
-
-
-        //Shortcuts
-        Thread.sleep((2000));
-        headerMenu.click();
-        WebElement shtcut = driver.findElement(By.partialLinkText(link6));
+        WebElement shtcut = driver.findElement(By.id("shortcuts-button"));
         hoverOver(shtcut);
+        Thread.sleep(2000);
         shtcut.click();
-        driver.navigate().back();*/
+        Thread.sleep(2000);
+        driver.navigate().back();
 
     }
 

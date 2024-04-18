@@ -1,0 +1,18 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="methods" thread-count="8">
+    <test name="MyParallelTest" verbose="2" preserve-order="true">
+<!--<suite name="All Test Suite" preserve-order="true">
+    <test name="MySequentialTest" verbose="2" preserve-order="true">-->
+        <classes>
+            <class name="HomePage"/>
+            <class name="DatasetsPage"/>
+            <class name="AppsPage"/>
+            <class name="CaseStudiesPage"/>
+            <class name="FaqPage"/>
+            <class name="DataCatalog"/>
+            <class name="OceanTimeseriesPage"/>
+            <class name="SplitViewAppPage"/>
+        </classes>
+    </test>
+</suite>
+

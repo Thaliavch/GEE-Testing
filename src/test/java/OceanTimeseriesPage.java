@@ -131,6 +131,18 @@ public class OceanTimeseriesPage {
                 .perform();
 
         Thread.sleep(10000);
+
+        // Testing another location
+        xOffset = 200;
+        yOffset = 200;
+
+        actions.moveToElement(mapContainer)
+                .moveByOffset(xOffset, yOffset)
+                .click()
+                .perform();
+
+        Thread.sleep(10000);
+
     }
 
     @Test(priority = 4)
@@ -146,22 +158,22 @@ public class OceanTimeseriesPage {
         // Find the dropdown option by visible text 'clicked location'
         WebElement clickedLocation = driver.findElement(By.xpath("//span[@class='name expand' and text()='clicked location']"));
         clickedLocation.click();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
 
 
         // Clicking the option named 'SST Composite'
         WebElement sstComposite = driver.findElement(By.xpath("//span[@class='name expand' and text()='SST Composite']"));
         sstComposite.click();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
 
         // Clicking location option again
         clickedLocation.click();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
 
 
         // Clicking the option named 'SST Composite' again
         sstComposite.click();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
 
 
     }
